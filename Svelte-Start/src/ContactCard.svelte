@@ -25,6 +25,10 @@ export let imageUrl;
     height: 100%;
   }
 
+.thumb-placeholder {
+    background-color: #ccc;
+}
+
   img {
     width: 100%;
     height: 100%;
@@ -60,7 +64,8 @@ export let imageUrl;
 
 <div class="contact-card">
   <header>
-    <div class="thumb">
+    <!-- <div class="{imageUrl ? 'thumb' : 'thumb thumb-placeholder'}"> -->
+    <div class="thumb" class:thumb-placeholder={!imageUrl}>
       <img src={imageUrl} alt="" />
     </div>
     <div class="user-data">
